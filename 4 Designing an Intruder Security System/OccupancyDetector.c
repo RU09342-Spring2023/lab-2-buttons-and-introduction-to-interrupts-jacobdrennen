@@ -27,33 +27,33 @@ int main(void)
   {
       if(!(P4IN & BIT1))    //reset if button is pressed
       {
-          P1OUT &= ~BIT0;
+          P1OUT &= ~BIT0;   //turns red led off
           i=0;
       }
       if(!(P2IN & BIT3))    //If button press
         {
-          P6OUT &= ~BIT6;
-              while(i<28)       //while looper for timer. Flashes red button
+          P6OUT &= ~BIT6;       //turns green led off just in case it is still on
+              while(i<56)       //while looper for timer. Flashes red button. 15 seconds
               {
                   P1OUT ^= BIT0;
                   __delay_cycles(500000);
                   P1OUT ^= ~BIT0;
                   i++;
               }
-              if(i>=28)           //if time goes over 28 red stays on
+              if(i>=56)           //if i goes over 56(15 seconds) red stays on
               {
                 P1OUT |= BIT0;
               }
         }
         else                    //green flashes
         {
-            if(i >= 15)        //if timer variable reaches the 15 seconds hold red light on
+            if(i >= 56)        //if timer variable reaches the 15 seconds hold red light on
             {
                 P1OUT |= BIT0;
             }
             else            //else flash green light every 3 seconds, and reset i to 0
             {
-                P1OUT &= ~BIT0;
+                P1OUT &= ~BIT0; //sets red led to 0 just incase it was still on
                 P6OUT ^= BIT6;
                 __delay_cycles(100000);
                 P6OUT ^= ~BIT6;
