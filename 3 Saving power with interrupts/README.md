@@ -75,5 +75,11 @@ Then load up Energy Trace and perform the similar capture of Power with the LED 
 2. Even with the LED unplugged, why is there still power increases when you press the button?
 
 
-# Screenshots and Answers to Questions
-**Replace this section with your screenshots of Energy Trace and provide some reasoning as to Questions 1 and 2 in the Power consumption of the Interrupts Section.**
+# Screenshots and Answers to Questions!
+[Screenshot 2023-02-02 173430](https://user-images.githubusercontent.com/123119631/217634528-f6dd5e4b-e32a-4c7e-80af-550f15f8b247.png)
+[Screenshot 2023-02-02 173211](https://user-images.githubusercontent.com/123119631/217634591-6afabe80-ba17-4da0-a09f-4d3ce45c3e6a.png)
+1. It is higher because it is constantly using power to check if the button is being pressed.
+2. It is letting current through when you are pressing the button
+
+
+
